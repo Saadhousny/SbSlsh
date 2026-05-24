@@ -1,0 +1,160 @@
+.screen {
+  min-height: 100%;
+  background: #fbfaf7;
+}
+
+.hero {
+  background: var(--tangerine-orange);
+  color: #fff;
+  padding: 15px 36px 32px;
+}
+
+.greeting {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.balance {
+  font-size: 31px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.account {
+  font-size: 16px;
+  font-weight: 700;
+  opacity: 0.78;
+  margin-top: 4px;
+}
+
+.heroTiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.heroTile {
+  min-height: 69px;
+  border-radius: 12px;
+  background: #f4efe7;
+  color: rgba(255,255,255,0.84);
+  padding: 15px 16px;
+  text-align: left;
+}
+
+.heroTile span {
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.heroTile strong {
+  display: block;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.heroTile .saving {
+  color: #96f1c7;
+}
+
+.content {
+  padding: 19px 35px 28px;
+}
+
+.sectionTitle {
+  color: #8a8983;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.alertCard {
+  width: 100%;
+  border-radius: 17px;
+  padding: 16px 19px;
+  margin-bottom: 14px;
+  text-align: left;
+  border: 1.5px solid;
+}
+
+.alertTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  margin-bottom: 9px;
+}
+
+.alertTop strong,
+.alertTop span {
+  font-weight: 900;
+}
+
+.alertCard p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.symbol {
+  display: inline-flex;
+  width: 22px;
+  margin-right: 6px;
+  justify-content: center;
+}
+
+.aiBadge {
+  background: #eee7ff;
+  color: #5b25b8;
+  border-radius: 11px;
+  padding: 2px 9px;
+  font-size: 14px;
+}
+
+.lifeCard {
+  background: #dff4ed;
+  border-color: #28af7c;
+  color: #0d5a50;
+}
+
+.renewalCard {
+  background: #fff0f0;
+  border-color: #ff4e55;
+  color: #a71920;
+}
+
+.savingsCard {
+  background: #fff5dc;
+  border-color: #f39a22;
+  color: #7b4106;
+}
+
+.transactions {
+  margin-top: 5px;
+}
+
+.txRow {
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9e3d8;
+  font-size: 16px;
+  font-weight: 800;
+  color: #898782;
+}
+
+.txRow strong {
+  color: #101010;
+  font-size: 16px;
+}

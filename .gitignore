@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Compiled class file
 *.class
 
@@ -22,3 +23,9 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+=======
+node_modules
+dist
+.env
+.DS_Store
+>>>>>>> cfd9ed7 (Add Tangerine subscription agent prototype)

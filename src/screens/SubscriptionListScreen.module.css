@@ -1,0 +1,187 @@
+.screen {
+  min-height: 100%;
+  background: #fbfaf7;
+  padding: 23px 21px 22px;
+}
+
+.back {
+  background: transparent;
+  color: #8a8983;
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.screen h1 {
+  font-size: 23px;
+  line-height: 1.15;
+  font-weight: 900;
+  color: #050505;
+}
+
+.subtitle {
+  color: #85837d;
+  font-size: 15px;
+  font-weight: 800;
+  margin: 4px 0 15px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.summary > div {
+  height: 70px;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary strong {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.summary span {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.summaryCancel {
+  background: #fde9ea;
+  color: #a71920;
+}
+
+.summaryReview {
+  background: #fbefd8;
+  color: #815005;
+}
+
+.summaryKeep {
+  background: #e6f1d9;
+  color: #2a6414;
+}
+
+.group {
+  margin-bottom: 20px;
+}
+
+.group h2 {
+  color: #85837d;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.subRow {
+  width: 100%;
+  min-height: 78px;
+  background: #fff;
+  border: 1px solid #eadfd2;
+  border-radius: 13px;
+  padding: 13px 13px 13px 15px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.subRow.cancel {
+  background: #fff8f8;
+  border-color: #ff4e55;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #fac1c7;
+  color: #9b252a;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.review .logo {
+  background: #ffca73;
+  color: #7d4d06;
+}
+
+.keep .logo {
+  background: #eaf4ff;
+  color: #0060a6;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.info strong {
+  display: block;
+  color: #030303;
+  font-size: 19px;
+  line-height: 1.12;
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info em,
+.price em {
+  display: block;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #85837d;
+}
+
+.cancel .info em {
+  color: #b01c22;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.price strong {
+  color: #080808;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.price em {
+  border-radius: 999px;
+  padding: 4px 11px;
+  background: #fde6e7;
+  color: #a71920;
+  font-size: 14px;
+}
+
+.review .price em {
+  background: #f8ebcf;
+  color: #744907;
+}
+
+.keep .price em {
+  background: #e6f1d9;
+  color: #2a6414;
+}

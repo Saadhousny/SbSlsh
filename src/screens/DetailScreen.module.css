@@ -1,0 +1,164 @@
+.screen {
+  min-height: 100%;
+  background: #fbfaf7;
+  padding: 23px 31px 22px;
+}
+
+.back {
+  background: transparent;
+  color: #8a8983;
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 13px;
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 18px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: #fac1c7;
+  color: #8d2228;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.serviceHeader h1 {
+  font-size: 22px;
+  line-height: 1.06;
+  font-weight: 900;
+  color: #050505;
+}
+
+.serviceHeader p {
+  color: #85837d;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.aiCard {
+  border: 1.5px solid #ff7b81;
+  background: #fff0f0;
+  color: #a71920;
+  border-radius: 16px;
+  padding: 18px 17px;
+  margin-bottom: 18px;
+}
+
+.aiCard h2 {
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.aiCard h2 span {
+  display: inline-block;
+  width: 21px;
+}
+
+.aiCard p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.data {
+  margin-bottom: 17px;
+}
+
+.row {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #e9e3d9;
+}
+
+.row span {
+  color: #85837d;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.row strong {
+  color: #050505;
+  font-size: 16px;
+  font-weight: 900;
+  text-align: right;
+}
+
+.danger {
+  color: #a71920 !important;
+}
+
+.green {
+  color: #2a6414 !important;
+}
+
+.freeCard {
+  background: #edf8e4;
+  color: #2c6516;
+  border: 1.5px solid #8fc25c;
+  border-radius: 15px;
+  padding: 15px 16px;
+  margin-bottom: 14px;
+}
+
+.freeCard h2 {
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.freeCard p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.primaryCta,
+.secondaryCta {
+  width: 100%;
+  min-height: 47px;
+  border-radius: 9px;
+  border: 1.4px solid #c6c3bd;
+  background: #fff;
+  color: #111;
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.answer {
+  background: #fff;
+  border: 1px solid #e4ded4;
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #34312d;
+}
+
+.answer strong {
+  font-size: 14px;
+}
+
+.answer p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.notFound {
+  padding: 40px 20px;
+  text-align: center;
+  color: #666;
+}
