@@ -1,30 +1,30 @@
 .screen {
   min-height: 100%;
-  background: #fbfaf7;
+  background: var(--screen-bg);
 }
 
 .hero {
   background: var(--tangerine-orange);
   color: #fff;
-  padding: 15px 36px 32px;
+  padding: 14px 34px 32px;
 }
 
 .greeting {
   font-size: 16px;
-  font-weight: 800;
-  margin-bottom: 4px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .balance {
   font-size: 31px;
   line-height: 1;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: 0;
 }
 
 .account {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   opacity: 0.78;
   margin-top: 4px;
 }
@@ -39,9 +39,9 @@
 .heroTile {
   min-height: 69px;
   border-radius: 12px;
-  background: #f4efe7;
-  color: rgba(255,255,255,0.84);
-  padding: 15px 16px;
+  background: rgba(244, 239, 231, 0.96);
+  color: rgba(255,255,255,0.72);
+  padding: 15px 16px 13px;
   text-align: left;
 }
 
@@ -49,7 +49,7 @@
   display: block;
   font-size: 14px;
   line-height: 1;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .heroTile strong {
@@ -57,7 +57,7 @@
   color: #fff;
   font-size: 22px;
   line-height: 1.1;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .heroTile .saving {
@@ -65,13 +65,13 @@
 }
 
 .content {
-  padding: 19px 35px 28px;
+  padding: 18px 34px 28px;
 }
 
 .sectionTitle {
   color: #8a8983;
   font-size: 14px;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -80,7 +80,7 @@
 .alertCard {
   width: 100%;
   border-radius: 17px;
-  padding: 16px 19px;
+  padding: 16px 18px;
   margin-bottom: 14px;
   text-align: left;
   border: 1.5px solid;
@@ -97,20 +97,64 @@
 
 .alertTop strong,
 .alertTop span {
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .alertCard p {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.45;
 }
 
-.symbol {
+.coachMark,
+.alertMark,
+.bulbMark {
   display: inline-flex;
   width: 22px;
+  height: 22px;
   margin-right: 6px;
   justify-content: center;
+  align-items: center;
+  vertical-align: -4px;
+}
+
+.coachMark {
+  border: 2px solid currentColor;
+  border-radius: 7px;
+  font-size: 9px;
+  line-height: 1;
+}
+
+.alertMark {
+  border: 1.8px solid currentColor;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.bulbMark {
+  border: 1.8px solid currentColor;
+  border-radius: 50%;
+  position: relative;
+}
+
+.bulbMark::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.bulbMark::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  width: 9px;
+  height: 4px;
+  border: 1.5px solid currentColor;
+  border-top: 0;
+  border-radius: 0 0 5px 5px;
 }
 
 .aiBadge {
@@ -118,24 +162,25 @@
   color: #5b25b8;
   border-radius: 11px;
   padding: 2px 9px;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .lifeCard {
-  background: #dff4ed;
+  background: #ddf3ec;
   border-color: #28af7c;
   color: #0d5a50;
 }
 
 .renewalCard {
   background: #fff0f0;
-  border-color: #ff4e55;
+  border-color: var(--cancel-border);
   color: #a71920;
 }
 
 .savingsCard {
   background: #fff5dc;
-  border-color: #f39a22;
+  border-color: var(--review-border);
   color: #7b4106;
 }
 
@@ -150,11 +195,12 @@
   justify-content: space-between;
   border-bottom: 1px solid #e9e3d8;
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 700;
   color: #898782;
 }
 
 .txRow strong {
   color: #101010;
+  font-weight: 800;
   font-size: 16px;
 }

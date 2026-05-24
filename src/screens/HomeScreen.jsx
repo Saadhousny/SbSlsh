@@ -36,7 +36,7 @@ export default function HomeScreen() {
 
         <button className={`${styles.alertCard} ${styles.lifeCard}`} onClick={() => navigate('/home')}>
           <div className={styles.alertTop}>
-            <strong><span className={styles.symbol}>⌘</span> Life change detected</strong>
+            <strong><span className={styles.coachMark}>AI</span> Life change detected</strong>
             <span className={styles.aiBadge}>AI</span>
           </div>
           <p>Your grocery spend is up 40% and you've started buying baby products. We have 3 financial moves that could help. Tap to see them.</p>
@@ -45,7 +45,7 @@ export default function HomeScreen() {
         {renewalSub && (
           <button className={`${styles.alertCard} ${styles.renewalCard}`} onClick={() => navigate(`/subscription/${renewalSub.id}`)}>
             <div className={styles.alertTop}>
-              <strong><span className={styles.symbol}>!</span> Renewal in 7 days</strong>
+              <strong><span className={styles.alertMark}>!</span> Renewal in 7 days</strong>
               <span>${renewalSub.annualCost.toFixed(0)}/yr</span>
             </div>
             <p>{renewalSub.kb?.name || renewalSub.merchantName} renews May 31. You haven't logged in for {renewalSub.daysInactive} days. Tap to cancel.</p>
@@ -55,7 +55,7 @@ export default function HomeScreen() {
         {cancelSubs.length > 0 && (
           <button className={`${styles.alertCard} ${styles.savingsCard}`} onClick={() => navigate('/subscriptions')}>
             <div className={styles.alertTop}>
-              <strong><span className={styles.symbol}>☼</span> {Math.max(3, cancelSubs.length)} unused subscriptions</strong>
+              <strong><span className={styles.bulbMark} /> {Math.max(3, cancelSubs.length)} unused subscriptions</strong>
             </div>
             <p>Duolingo, Canva Pro, and LinkedIn could save you $97/mo. Tap to review all.</p>
           </button>

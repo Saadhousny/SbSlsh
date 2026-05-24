@@ -1,12 +1,12 @@
 .screen {
   min-height: 100%;
-  background: #fbfaf7;
+  background: var(--screen-bg);
   padding: 27px 31px 22px;
 }
 
 .progressHeader h1 {
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1.15;
   color: #050505;
 }
@@ -14,7 +14,7 @@
 .progressHeader p {
   color: #85837d;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 700;
   margin-top: 5px;
 }
 
@@ -37,7 +37,7 @@
   text-align: center;
   color: #85837d;
   font-size: 15px;
-  font-weight: 900;
+  font-weight: 700;
   margin: 13px 0 20px;
 }
 
@@ -63,7 +63,7 @@
 .step strong {
   color: #070707;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .step .muted,
@@ -78,7 +78,7 @@
   padding: 17px;
   font-size: 16px;
   line-height: 1.45;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .doneHeader {
@@ -101,14 +101,14 @@
 
 .doneHeader h1 {
   font-size: 25px;
-  font-weight: 900;
+  font-weight: 800;
   color: #050505;
 }
 
 .doneHeader p {
   color: #85837d;
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 700;
   margin-top: 5px;
 }
 
@@ -135,13 +135,13 @@
 .row span {
   color: #85837d;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .row strong {
   color: #050505;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 800;
   text-align: right;
 }
 
@@ -160,20 +160,20 @@
 
 .watch h2 {
   font-size: 15px;
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: 6px;
 }
 
 .watch p {
   font-size: 15px;
   line-height: 1.45;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .next h2 {
   color: #85837d;
   font-size: 15px;
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: 10px;
 }
 
@@ -200,7 +200,7 @@
   justify-content: center;
   background: #fac1c7;
   color: #9b252a;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .nextCard div {
@@ -212,7 +212,7 @@
   color: #050505;
   font-size: 17px;
   line-height: 1.1;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .nextCard em {
@@ -220,7 +220,7 @@
   color: #85837d;
   font-size: 14px;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .nextCard b {
@@ -239,7 +239,7 @@
   background: #fff;
   color: #111;
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .notFound {

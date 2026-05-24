@@ -1,14 +1,14 @@
 .screen {
   min-height: 100%;
-  background: #fbfaf7;
-  padding: 23px 31px 22px;
+  background: var(--screen-bg);
+  padding: 22px 31px 22px;
 }
 
 .back {
   background: transparent;
   color: #8a8983;
   font-size: 17px;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 13px;
 }
 
@@ -35,14 +35,14 @@
 .serviceHeader h1 {
   font-size: 22px;
   line-height: 1.06;
-  font-weight: 900;
+  font-weight: 800;
   color: #050505;
 }
 
 .serviceHeader p {
   color: #85837d;
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .aiCard {
@@ -56,19 +56,27 @@
 
 .aiCard h2 {
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: 10px;
 }
 
 .aiCard h2 span {
-  display: inline-block;
+  display: inline-flex;
   width: 21px;
+  height: 21px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid currentColor;
+  border-radius: 7px;
+  font-size: 9px;
+  vertical-align: -3px;
+  margin-right: 3px;
 }
 
 .aiCard p {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .data {
@@ -87,13 +95,13 @@
 .row span {
   color: #85837d;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .row strong {
   color: #050505;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 800;
   text-align: right;
 }
 
@@ -116,14 +124,14 @@
 
 .freeCard h2 {
   font-size: 15px;
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: 6px;
 }
 
 .freeCard p {
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .primaryCta,
@@ -135,7 +143,7 @@
   background: #fff;
   color: #111;
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: 10px;
 }
 

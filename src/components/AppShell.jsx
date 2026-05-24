@@ -17,7 +17,7 @@ export default function AppShell({ children }) {
         <div className={styles.statusBar}>
           <span className={styles.time}>9:41</span>
           <div className={styles.statusIcons}>
-            <span className={styles.wifiIcon}>⌁</span>
+            <span className={styles.wifiIcon} />
             <span className={styles.batteryIcon} />
           </div>
         </div>
@@ -42,28 +42,28 @@ export default function AppShell({ children }) {
               className={`${styles.navItem} ${location.pathname === '/home' ? styles.active : ''}`}
               onClick={() => navigate('/home')}
             >
-              <span className={styles.navIcon}>⌂</span>
+              <span className={`${styles.navIcon} ${styles.homeIcon}`} />
               <span>Home</span>
             </button>
             <button
               className={`${styles.navItem} ${location.pathname.startsWith('/subscriptions') || location.pathname.startsWith('/subscription/') || location.pathname.startsWith('/cancel/') ? styles.active : ''}`}
               onClick={() => navigate('/subscriptions')}
             >
-              <span className={styles.navIcon}>⇄</span>
+              <span className={`${styles.navIcon} ${styles.subsIcon}`}>⇄</span>
               <span>Subs</span>
             </button>
             <button
               className={`${styles.navItem}`}
               onClick={() => navigate('/home')}
             >
-              <span className={styles.navIcon}>⌘</span>
+              <span className={`${styles.navIcon} ${styles.coachIcon}`}>⌘</span>
               <span>Coach</span>
             </button>
             <button
               className={`${styles.navItem}`}
               onClick={() => navigate('/setup')}
             >
-              <span className={styles.navIcon}>▣</span>
+              <span className={`${styles.navIcon} ${styles.chatIcon}`} />
               <span>Chat</span>
             </button>
           </nav>

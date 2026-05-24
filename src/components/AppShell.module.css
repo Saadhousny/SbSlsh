@@ -4,17 +4,17 @@
   align-items: center;
   justify-content: center;
   background: #efede5;
-  padding: 8px;
+  padding: 30px 12px;
 }
 
 .phoneFrame {
   width: 410px;
-  height: 820px;
-  max-height: calc(100vh - 16px);
-  background: #fbfaf7;
-  border: 2px solid #ddd9cf;
-  border-radius: 48px;
-  box-shadow: 0 18px 48px rgba(48, 43, 32, 0.22);
+  height: 930px;
+  max-height: calc(100vh - 24px);
+  background: var(--screen-bg);
+  border: 1px solid rgba(219, 214, 203, 0.5);
+  border-radius: 42px;
+  box-shadow: 0 28px 70px rgba(51, 45, 33, 0.18);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -22,13 +22,7 @@
 }
 
 .phoneFrame::before {
-  content: '';
-  position: absolute;
-  inset: 11px;
-  border: 1px solid #e7e2d7;
-  border-radius: 38px;
-  pointer-events: none;
-  z-index: 5;
+  display: none;
 }
 
 .statusBar,
@@ -41,16 +35,16 @@
 }
 
 .statusBar {
-  height: 28px;
+  height: 33px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 0 30px 3px;
+  padding: 0 35px 5px;
 }
 
 .time {
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .statusIcons {
@@ -60,9 +54,25 @@
 }
 
 .wifiIcon {
-  font-size: 16px;
-  line-height: 1;
-  transform: rotate(180deg);
+  width: 13px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  position: relative;
+}
+
+.wifiIcon::after {
+  content: '';
+  position: absolute;
+  right: 1px;
+  top: 5px;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
 }
 
 .batteryIcon {
@@ -85,11 +95,11 @@
 }
 
 .header {
-  height: 34px;
+  height: 35px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 0 28px 9px;
+  padding: 0 30px 8px;
 }
 
 .headerBrand {
@@ -99,31 +109,31 @@
 
 .brandName {
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .content {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  background: #fbfaf7;
+  background: var(--screen-bg);
 }
 
 .bottomNav {
-  height: 72px;
+  height: 74px;
   background: #fff;
   border-top: 1px solid #e9e3d9;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-shrink: 0;
-  padding: 5px 18px 10px;
+  padding: 6px 23px 10px;
   position: relative;
   z-index: 6;
 }
 
 .navItem {
-  width: 58px;
+  width: 54px;
   height: 54px;
   background: transparent;
   display: flex;
@@ -133,22 +143,82 @@
   gap: 2px;
   color: #85847e;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .navIcon {
-  font-size: 28px;
+  width: 26px;
+  height: 26px;
+  font-size: 27px;
   line-height: 1;
   font-weight: 500;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeIcon::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 13px;
+  border: 2px solid currentColor;
+  border-top: 0;
+  bottom: 3px;
+  border-radius: 2px;
+}
+
+.homeIcon::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-left: 2px solid currentColor;
+  border-top: 2px solid currentColor;
+  transform: rotate(45deg);
+  top: 3px;
+}
+
+.subsIcon {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.coachIcon {
+  font-size: 27px;
+}
+
+.chatIcon::before {
+  content: '';
+  width: 17px;
+  height: 13px;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+}
+
+.chatIcon::after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  bottom: 4px;
+  width: 7px;
+  height: 7px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: skew(-18deg);
+  background: #fff;
 }
 
 .navItem.active {
   color: var(--tangerine-orange);
+  font-weight: 600;
 }
 
 @media (max-width: 430px) {
   .shell {
     padding: 0;
+    background: var(--screen-bg);
   }
 
   .phoneFrame {
@@ -157,6 +227,7 @@
     max-height: none;
     border-radius: 0;
     border: 0;
+    box-shadow: none;
   }
 
   .phoneFrame::before {

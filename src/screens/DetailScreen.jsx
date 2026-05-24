@@ -47,7 +47,7 @@ export default function DetailScreen() {
       </section>
 
       <section className={styles.aiCard}>
-        <h2><span>⌘</span> AI recommendation</h2>
+        <h2><span>AI</span> AI recommendation</h2>
         <p>
           {isLinkedIn
             ? 'You used 0 of 5 InMails, never opened the app in 45 days, and applied to 0 jobs with Premium filters. Every paid feature went unused. Cancel and save $599.88 this year.'
