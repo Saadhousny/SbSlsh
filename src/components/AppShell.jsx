@@ -8,7 +8,7 @@ export default function AppShell({ children }) {
   const location = useLocation()
   const { isAnalyzed } = useApp()
 
-  const isSetup = location.pathname === '/setup'
+  const isSetup = false
   const isHome = location.pathname === '/home'
 
   return (
@@ -53,15 +53,8 @@ export default function AppShell({ children }) {
               <span>Subs</span>
             </button>
             <button
-              className={`${styles.navItem}`}
-              onClick={() => navigate('/home')}
-            >
-              <span className={`${styles.navIcon} ${styles.coachIcon}`}>⌘</span>
-              <span>Coach</span>
-            </button>
-            <button
-              className={`${styles.navItem}`}
-              onClick={() => navigate('/setup')}
+              className={`${styles.navItem} ${location.pathname === '/access' ? styles.active : ''}`}
+              onClick={() => navigate('/access')}
             >
               <span className={`${styles.navIcon} ${styles.chatIcon}`} />
               <span>Chat</span>

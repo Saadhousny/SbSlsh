@@ -33,6 +33,65 @@
   margin-bottom: 18px;
 }
 
+.frequencyPanel {
+  background: #fff;
+  border: 1px solid #eadfd2;
+  border-radius: 14px;
+  padding: 13px 14px;
+  margin-bottom: 18px;
+  display: grid;
+  grid-template-columns: 1fr 134px;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.frequencyPanel label {
+  color: #050505;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.frequencyPanel p {
+  grid-column: 1 / -1;
+  color: #85837d;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.selectWrap {
+  position: relative;
+}
+
+.selectWrap::after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--tangerine-orange);
+  border-bottom: 2px solid var(--tangerine-orange);
+  transform: translateY(-68%) rotate(45deg);
+  pointer-events: none;
+}
+
+.selectWrap select {
+  width: 100%;
+  min-height: 42px;
+  appearance: none;
+  border: 1.5px solid #ffd1b8;
+  border-radius: 11px;
+  background: #fff4eb;
+  color: var(--tangerine-orange);
+  padding: 0 34px 0 13px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  outline: none;
+}
+
 .summary > div {
   height: 70px;
   border-radius: 11px;
@@ -168,6 +227,13 @@
   font-weight: 800;
 }
 
+.price small {
+  color: #85837d;
+  font-size: 12px;
+  font-weight: 800;
+  margin-top: -5px;
+}
+
 .price em {
   border-radius: 999px;
   padding: 4px 11px;
@@ -184,4 +250,26 @@
 .keep .price em {
   background: #e6f1d9;
   color: #2a6414;
+}
+
+.emptyState {
+  background: var(--panel-bg);
+  border-radius: 15px;
+  padding: 18px 17px;
+  color: #85837d;
+}
+
+.emptyState strong {
+  display: block;
+  color: #050505;
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.emptyState span {
+  display: block;
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 600;
 }

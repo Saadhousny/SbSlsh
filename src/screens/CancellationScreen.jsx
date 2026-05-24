@@ -95,6 +95,11 @@ export default function CancellationScreen() {
       <section className={styles.watch}>
         <h2>Agent is watching</h2>
         <p>If {name} charges your card again after May 31, the agent will alert you immediately and draft a dispute for Tangerine support.</p>
+        <div className={styles.watchGrid}>
+          <span>Watching</span><strong>Merchant name, amount, card ending, renewal date</strong>
+          <span>Evidence</span><strong>Cancellation email + AI usage trail</strong>
+          <span>Next action</span><strong>Auto-draft dispute if charged again</strong>
+        </div>
       </section>
 
       {nextSubs.length > 0 && (

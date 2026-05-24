@@ -68,22 +68,24 @@ export function detectSubscriptions(transactions) {
       gaps.push(Math.round(diffMs / (1000 * 60 * 60 * 24)))
     }
 
-    // Check if gaps cluster around 30 days (±5) or 365 days (±10)
+    // Check if gaps cluster around weekly, monthly, annual, or semi-annual cycles.
+    const isWeekly = gaps.every(g => g >= 6 && g <= 8)
     const isMonthly = gaps.every(g => g >= 25 && g <= 35)
     const isAnnual = gaps.every(g => g >= 355 && g <= 375)
     const isSemiAnnual = gaps.every(g => g >= 175 && g <= 195)
 
-    if (!isMonthly && !isAnnual && !isSemiAnnual) continue
+    if (!isWeekly && !isMonthly && !isAnnual && !isSemiAnnual) continue
 
     const [normalizedName, amountStr] = key.split('|||')
     const amount = parseFloat(amountStr)
     const lastCharge = charges[charges.length - 1].date
-    const billingCycle = isAnnual ? 'annual' : isSemiAnnual ? 'semi-annual' : 'monthly'
-    const monthlyEquivalent = isAnnual ? amount / 12 : isSemiAnnual ? amount / 6 : amount
+    const billingCycle = isWeekly ? 'weekly' : isAnnual ? 'annual' : isSemiAnnual ? 'semi-annual' : 'monthly'
+    const monthlyEquivalent = isWeekly ? amount * 4.33 : isAnnual ? amount / 12 : isSemiAnnual ? amount / 6 : amount
 
     // Determine next renewal date
     let nextRenewal = new Date(lastCharge)
-    if (isMonthly) nextRenewal.setMonth(nextRenewal.getMonth() + 1)
+    if (isWeekly) nextRenewal.setDate(nextRenewal.getDate() + 7)
+    else if (isMonthly) nextRenewal.setMonth(nextRenewal.getMonth() + 1)
     else if (isAnnual) nextRenewal.setFullYear(nextRenewal.getFullYear() + 1)
     else nextRenewal.setMonth(nextRenewal.getMonth() + 6)
 

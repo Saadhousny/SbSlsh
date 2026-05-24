@@ -170,6 +170,28 @@
   font-weight: 600;
 }
 
+.watchGrid {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 9px 12px;
+  border-top: 1px solid rgba(54, 48, 164, 0.2);
+  margin-top: 13px;
+  padding-top: 12px;
+}
+
+.watchGrid span {
+  color: #615bd1;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.watchGrid strong {
+  color: var(--ai-text);
+  font-size: 13px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
 .next h2 {
   color: #85837d;
   font-size: 15px;

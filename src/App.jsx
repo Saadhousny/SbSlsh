@@ -14,7 +14,8 @@ export default function App() {
       <AppShell>
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/setup" element={<SetupScreen />} />
+          <Route path="/setup" element={<Navigate to="/access" replace />} />
+          <Route path="/access" element={<SetupScreen />} />
           <Route path="/home" element={<HomeScreen />} />
           <Route path="/subscriptions" element={<SubscriptionListScreen />} />
           <Route path="/subscription/:id" element={<DetailScreen />} />

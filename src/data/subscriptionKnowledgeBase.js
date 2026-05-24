@@ -132,6 +132,17 @@ export const SUBSCRIPTION_KB = {
     cancelUrl: 'https://www.amazon.ca/mc/pipelines',
     method: 'browser',
   },
+  GOODFOOD: {
+    name: 'Goodfood Weekly',
+    logo: 'GF',
+    color: '#FF6B00',
+    freePlan: false,
+    cheapestPaid: 'Pause weekly box',
+    whatYouLose: 'Weekly meal kit delivery and member pricing',
+    cancelEmail: 'support@makegoodfood.ca',
+    cancelUrl: 'https://www.makegoodfood.ca/account',
+    method: 'browser',
+  },
 }
 
 // Merchant name normalization patterns
@@ -148,4 +159,5 @@ export const MERCHANT_PATTERNS = [
   { pattern: /DISNEY\+|DISNEYPLUS/i, key: 'DISNEYPLUS' },
   { pattern: /YOUTUBE PREMIUM|YT PREMIUM/i, key: 'YOUTUBEPREMIUM' },
   { pattern: /AMAZON PRIME|AMZN PRIME/i, key: 'AMAZONPRIME' },
+  { pattern: /GOODFOOD|MAKEGOODFOOD/i, key: 'GOODFOOD' },
 ]

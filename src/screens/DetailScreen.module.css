@@ -54,6 +54,101 @@
   margin-bottom: 18px;
 }
 
+.intentCard,
+.actionCard,
+.duplicateCard,
+.monitorCard {
+  border-radius: 15px;
+  padding: 15px 16px;
+  margin-bottom: 14px;
+}
+
+.intentCard {
+  background: #fff;
+  border: 1px solid #eadfd2;
+}
+
+.intentTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.intentTop span,
+.actionCard span,
+.duplicateCard span {
+  display: block;
+  color: #85837d;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+
+.intentTop strong {
+  color: #050505;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.intentTop b {
+  color: var(--ai-text);
+  background: var(--ai-bg);
+  border-radius: 999px;
+  font-size: 13px;
+  padding: 5px 9px;
+}
+
+.scoreTrack {
+  height: 8px;
+  border-radius: 999px;
+  background: #efe9df;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.scoreTrack span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--cancel-border);
+}
+
+.intentCard p,
+.actionCard p,
+.duplicateCard p,
+.monitorCard p {
+  color: #67645e;
+  font-size: 14px;
+  line-height: 1.38;
+  font-weight: 600;
+}
+
+.actionCard {
+  background: #fff4dd;
+  border: 1.5px solid var(--review-border);
+  color: var(--review-text);
+}
+
+.actionCard strong,
+.duplicateCard strong {
+  display: block;
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.duplicateCard {
+  background: var(--ai-bg);
+  border: 1.5px solid var(--ai-border);
+  color: var(--ai-text);
+}
+
 .aiCard h2 {
   font-size: 16px;
   font-weight: 800;
@@ -132,6 +227,23 @@
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
+}
+
+.loseTitle {
+  margin-top: 12px;
+  color: #a71920;
+}
+
+.monitorCard {
+  background: var(--ai-bg);
+  border: 1.5px solid var(--ai-border);
+  color: var(--ai-text);
+}
+
+.monitorCard h2 {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 6px;
 }
 
 .primaryCta,

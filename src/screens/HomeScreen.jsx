@@ -11,6 +11,12 @@ export default function HomeScreen() {
   const totals = computeTotals(subscriptions)
   const cancelSubs = subscriptions.filter(s => s.verdict === 'CANCEL' && !s.cancelled)
   const renewalSub = cancelSubs.find(s => s.knowledgeKey === 'LINKEDIN') || cancelSubs[0]
+  const hasMusicDuplicate = subscriptions.some(s => s.knowledgeKey === 'SPOTIFY' && !s.cancelled) &&
+    subscriptions.some(s => s.knowledgeKey === 'APPLEMUSIC' && !s.cancelled)
+  const appleMusic = subscriptions.find(s => s.knowledgeKey === 'APPLEMUSIC' && !s.cancelled)
+  const subscriptionMonthlyTotal = subscriptions
+    .filter(s => s.billingCycle !== 'weekly')
+    .reduce((sum, sub) => sum + sub.monthlyEquivalent, 0)
 
   return (
     <div className={styles.screen}>
@@ -22,7 +28,7 @@ export default function HomeScreen() {
         <div className={styles.heroTiles}>
           <button className={styles.heroTile} onClick={() => navigate('/subscriptions')}>
             <span>Monthly subs</span>
-            <strong>${totals.monthlyTotal.toFixed(0)}</strong>
+            <strong>${subscriptionMonthlyTotal.toFixed(0)}</strong>
           </button>
           <button className={styles.heroTile} onClick={() => navigate('/subscriptions')}>
             <span>Can save</span>
@@ -32,15 +38,7 @@ export default function HomeScreen() {
       </section>
 
       <section className={styles.content}>
-        <h2 className={styles.sectionTitle}>AI Coach Alerts</h2>
-
-        <button className={`${styles.alertCard} ${styles.lifeCard}`} onClick={() => navigate('/home')}>
-          <div className={styles.alertTop}>
-            <strong><span className={styles.coachMark}>AI</span> Life change detected</strong>
-            <span className={styles.aiBadge}>AI</span>
-          </div>
-          <p>Your grocery spend is up 40% and you've started buying baby products. We have 3 financial moves that could help. Tap to see them.</p>
-        </button>
+        <h2 className={styles.sectionTitle}>Subscription Alerts</h2>
 
         {renewalSub && (
           <button className={`${styles.alertCard} ${styles.renewalCard}`} onClick={() => navigate(`/subscription/${renewalSub.id}`)}>
@@ -58,6 +56,16 @@ export default function HomeScreen() {
               <strong><span className={styles.bulbMark} /> {Math.max(3, cancelSubs.length)} unused subscriptions</strong>
             </div>
             <p>Duolingo, Canva Pro, and LinkedIn could save you $97/mo. Tap to review all.</p>
+          </button>
+        )}
+
+        {hasMusicDuplicate && appleMusic && (
+          <button className={`${styles.alertCard} ${styles.duplicateCard}`} onClick={() => navigate(`/subscription/${appleMusic.id}`)}>
+            <div className={styles.alertTop}>
+              <strong><span className={styles.duplicateMark}>2</span> Duplicate subscription found</strong>
+              <span>${appleMusic.annualCost.toFixed(0)}/yr</span>
+            </div>
+            <p>You pay for Spotify and Apple Music. Spotify is used daily, but Apple Music has no usage signal for 62 days. AI recommends cancelling Apple Music.</p>
           </button>
         )}
 
