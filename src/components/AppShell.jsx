@@ -6,7 +6,7 @@ import styles from './AppShell.module.css'
 export default function AppShell({ children }) {
   const navigate = useNavigate()
   const location = useLocation()
-  const { isAnalyzed } = useApp()
+  const { isAnalyzed, accessGateCompleted } = useApp()
 
   const isSetup = false
   const isHome = location.pathname === '/home'
@@ -47,7 +47,7 @@ export default function AppShell({ children }) {
             </button>
             <button
               className={`${styles.navItem} ${location.pathname.startsWith('/subscriptions') || location.pathname.startsWith('/subscription/') || location.pathname.startsWith('/cancel/') ? styles.active : ''}`}
-              onClick={() => navigate('/subscriptions')}
+              onClick={() => navigate(accessGateCompleted ? '/subscriptions' : '/access?next=subscriptions')}
             >
               <span className={`${styles.navIcon} ${styles.subsIcon}`}>⇄</span>
               <span>Subs</span>

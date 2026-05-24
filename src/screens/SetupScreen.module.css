@@ -64,12 +64,45 @@
   font-weight: 500;
 }
 
+.agentCard,
 .bankCard {
   background: #fff4eb;
   border: 1.5px solid #ffc19a;
   border-radius: 16px;
   padding: 16px 17px;
   margin-bottom: 19px;
+}
+
+.agentCard {
+  background: var(--ai-bg);
+  border-color: var(--ai-border);
+}
+
+.agentCard span {
+  display: block;
+  color: var(--ai-text);
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.agentCard strong {
+  display: block;
+  color: var(--ai-text);
+  font-size: 16px;
+  line-height: 1.28;
+  font-weight: 800;
+}
+
+.agentCard p {
+  color: #5550b7;
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 600;
+  margin-top: 7px;
 }
 
 .cardEyebrow,
@@ -105,6 +138,109 @@
 
 .accessList {
   margin-bottom: 18px;
+}
+
+.sourceCard {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e8dfd3;
+  border-radius: 15px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.connectedSource {
+  background: #f4fff9;
+  border-color: #22ad78;
+}
+
+.sourceTop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sourceIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  background: #fff4eb;
+  color: var(--tangerine-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.connectedSource .sourceIcon {
+  background: #22ad78;
+  color: #fff;
+}
+
+.sourceTop div {
+  flex: 1;
+  min-width: 0;
+}
+
+.sourceTop strong {
+  display: block;
+  color: #050505;
+  font-size: 16px;
+  line-height: 1.12;
+  font-weight: 800;
+}
+
+.sourceTop em {
+  display: block;
+  color: #85837d;
+  font-size: 13px;
+  line-height: 1.25;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.sourceBtn {
+  min-width: 92px;
+  min-height: 34px;
+  border-radius: 10px;
+  background: var(--tangerine-orange);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 0 10px;
+}
+
+.sourceBtn:disabled {
+  background: #e6e0d7;
+  color: #77746d;
+}
+
+.connectedSource .sourceBtn {
+  background: #ddf3ec;
+  color: #0d6b51;
+}
+
+.sourceCard p {
+  color: #67645e;
+  font-size: 14px;
+  line-height: 1.32;
+  font-weight: 500;
+  margin: 11px 0 8px 48px;
+}
+
+.sourceCard small {
+  display: inline-block;
+  color: #0d6b51;
+  background: #ddf3ec;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 700;
+  padding: 5px 8px;
+  margin-left: 48px;
 }
 
 .accessRow {

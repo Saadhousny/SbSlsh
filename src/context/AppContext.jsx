@@ -15,6 +15,13 @@ export function AppProvider({ children }) {
     email: 'user@gmail.com',
   })
   const [cancelledIds, setCancelledIds] = useState([])
+  const [accessGateCompleted, setAccessGateCompleted] = useState(false)
+  const [connectedSources, setConnectedSources] = useState({
+    gmail: false,
+    appStore: false,
+    googlePlay: false,
+    linkedIn: false,
+  })
 
   // Analyze a CSV string (uploaded or sample)
   const analyzeCSV = useCallback((csvText, lastActivity = SAMPLE_LAST_ACTIVITY) => {
@@ -48,6 +55,14 @@ export function AppProvider({ children }) {
     return subscriptions.find(s => s.id === id) || null
   }, [subscriptions])
 
+  const connectSource = useCallback((id) => {
+    setConnectedSources(prev => ({ ...prev, [id]: true }))
+  }, [])
+
+  const completeAccessGate = useCallback(() => {
+    setAccessGateCompleted(true)
+  }, [])
+
   return (
     <AppContext.Provider value={{
       subscriptions,
@@ -56,10 +71,14 @@ export function AppProvider({ children }) {
       userProfile,
       setUserProfile,
       cancelledIds,
+      accessGateCompleted,
+      connectedSources,
       analyzeCSV,
       loadSampleData,
       markCancelled,
       getSubscription,
+      connectSource,
+      completeAccessGate,
     }}>
       {children}
     </AppContext.Provider>
