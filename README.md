@@ -186,27 +186,6 @@ For follow-up questions answer using the user's real numbers only. Never give ge
 
 ---
 
-## Appendix — subscriptions.txt
-
-```
-NETFLIX: no free plan. Cheapest = Standard with Ads $7.99/mo.
-SPOTIFY: free plan available (ads + shuffle only on mobile). Saves $11.99/mo.
-LINKEDIN: free plan available (full networking, job search, messaging). No InMail. Saves $49.99/mo.
-DUOLINGO: free plan available (same lessons, with ads). Saves $9.99/mo.
-CANVA: free plan available (most templates, limited premium assets). Saves $16.99/mo.
-ADOBE: no free plan. Cheapest = $9.99/mo photography plan.
-DROPBOX: free 2GB plan available. Cheapest paid = $9.99/mo 2TB.
-MICROSOFT365: free web version at office.com. Desktop apps need subscription.
-APPLE MUSIC: no free plan. Cheapest = $10.99/mo individual.
-DISNEY+: no free plan. Cheapest = $7.99/mo with ads.
-YOUTUBE PREMIUM: free plan available (ads). Saves $13.99/mo.
-AMAZON PRIME: no free plan. Separate from Amazon shopping.
-CBC GEM: free plan available (limited content). Premium = $4.99/mo.
-GLOBE AND MAIL: free 10 articles/month. Digital = $19.99/mo.
-```
-
----
-
 ## License
 
 Built for Hackathon 2026. Internal Tangerine prototype.
